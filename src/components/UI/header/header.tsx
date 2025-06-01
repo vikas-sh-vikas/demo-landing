@@ -69,10 +69,13 @@ export default function Header() {
                   </Box>
 
                   <List>
-                    {navItems.map((text) => (
+                    {navItems.map((text: string) => (
                       <ListItem key={text} disablePadding>
                         <ListItemButton
-                          onClick={() => setDrawerOpen(false)}
+                          onClick={() => {
+                            setDrawerOpen(false);
+                            handleScroll(text);
+                          }}
                           className="rounded-md mb-1 hover:bg-[#ec7a30] hover:text-white transition"
                         >
                           <ListItemText primary={text} />
