@@ -1,0 +1,154 @@
+{
+  "home-banner": {
+    "header": "Mazoom invitations",
+    "header1": "Best way to invite",
+    "paragraph": "Your guests will enjoy high privacy and hassle-free use without any app downloads or links. Elevate your event planning today with us.",
+    "button": "Contact Us"
+  },
+  "invitation": {
+    "title": "Want to see how your guest will receive the invite ? and how to track it ?",
+    "button": "Try Now"
+  },
+  "features": {
+    "title": "All you need to manage your events",
+    "accordion": [
+      {
+        "title": "No Links",
+        "contentTitle": "No links, and bothersome pages to work with.",
+        "contentBody": "The invitation will be sent directly to your guest's WhatsApp, and they can respond in chat."
+      },
+      {
+        "title": "Direct Location Sharing",
+        "contentTitle": "Location sharing",
+        "contentBody": "with a click of a button , the location will be shared , adding convenience for your recipients."
+      },
+      {
+        "title": "RSVP feature",
+        "contentTitle": "Manage your attendees with RSVP",
+        "contentBody": "Miscalculation? Not a problem anymore! You will know who is attending and who is not, so you can manage your resources perfectly."
+      },
+      {
+        "title": "Unique QR code for each guest",
+        "contentTitle": "unique QR code for each guest",
+        "contentBody": "For your event privacy"
+      },
+      {
+        "title": "Guest Message",
+        "contentTitle": "Guest Message",
+        "contentBody": "Guest Message."
+      }
+    ]
+  },
+  "customers": {
+    "title": "What our customers say about us",
+    "tesimonials": [
+      {
+        "quote": "A new and very sophisticated idea.",
+        "feedback": "I enjoyed my experience with Mazoom. The invitations were so much easier!",
+        "author": "manalq00 - Apple Store review"
+      },
+      {
+        "quote": "The first choice for every occasion!✅",
+        "feedback": "The idea is really smart, I have received more than one invitation from my friends’ weddings through them. The process is very easy to deal with, and the best thing is that they have the reminder feature before the occasion for a few days to confirm all attendees and also the feature of sending the location. Really, the application saved us the trouble of searching for traditional cards and their high prices👍🏻",
+        "author": "SaraKhalid97 - Apple Store review"
+      },
+      {
+        "quote": "An excellent program 👌.",
+        "feedback": "The nice thing about it is the feature of accepting or rejecting, which lets you know who is attending and who is not 😍.",
+        "author": "hayat121212 - Apple Store review"
+      }
+    ],
+    "accordion-header": "All you need to manage your events",
+    "accordion": [
+      {
+        "title": "Automated sending",
+        "contentTitle": "Send all your invites with a click",
+        "contentBody": "your guests will receive invites Automatically through whatsapp"
+      },
+      {
+        "title": "Know Exactly whos attending",
+        "contentTitle": "Timely RSVP",
+        "contentBody": "The guest can easily click on confirm or decline , and you will get the respond directly in Mazoom App"
+      },
+      {
+        "title": "Advanced Tracking",
+        "contentTitle": "Delivery Confirmation Feature",
+        "contentBody": ": Stay informed. Track if the guest received the message , read it and more ."
+      },
+      {
+        "title": "Mazoom Scanner app",
+        "contentTitle": "Mazoom Scanner app",
+        "contentBody": "Mazoom Scanner app"
+      },
+      {
+        "title": "More",
+        "contentTitle": "",
+        "contentBody": "You can reply to any message through the app, and your guest will receive it from the designated invite number. Multiple options are available: change the invitation sender number, modify the invitation text, customize the login code design. and more , just contact US."
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Choose the plan that works for you",
+    "pricing-card": [
+      {
+        "title": "Basic package",
+        "sub-title": "Starting from 79 Saudi Riyals",
+        "pointers": [
+          "Send invites through whatsapp or email",
+          "RSVP",
+          "Unique Qr code for each guest",
+          "Event Location",
+          "Scanner App"
+        ]
+      },
+      {
+        "title": "Special Package",
+        "sub-title": "Starting from 900 Saudi Riyals",
+        "pointers": [
+          "All features of the basic package",
+          "Invitation management",
+          "sub-account",
+          "replace declines for free",
+          "Scanning management at the event"
+        ]
+      },
+      {
+        "title": "Premium package",
+        "sub-title": "Starting from 5000 Saudi riyals",
+        "pointers": [
+          "All features of the basic package",
+          "Account Manager",
+          "Using a private number",
+          "Invitation customization options"
+        ]
+      }
+    ],
+    "card-button": "Try for free"
+  },
+  "business-solution": {
+    "title": "Business Solutions",
+    "button": "Learn more"
+  },
+  "contact-us": {
+    "header": "Contact us",
+    "sub-header": "For more information or inquires please contact us.",
+    "button": "Contact Us",
+    "hours": "Working hours",
+    "time": "9 AM — 6 PM",
+    "phone": "Phone",
+    "phone-no": " +966 505 2787"
+  },
+  "footer": {
+    "address": "Mazoom Company - Riyadh,",
+    "address1": "Saudi Arabia At Takhassusi Street"
+  },
+  "header": [
+    "Log In",
+    "Home",
+    "Try Mazoom Invitation",
+    "Features",
+    "Customers",
+    "Pricing",
+    "Contact us"
+  ]
+}
