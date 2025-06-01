@@ -106,7 +106,7 @@ export default function Customers() {
       >
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 p-8 sm:p-12 lg:p-16 items-center">
           {/* Text + Accordion */}
-          <div className="lg:col-span-4 space-y-6 mx-auto max-w-[40vw]">
+          <div className="lg:col-span-4 space-y-6 mx-auto lg:max-w-[40vw]">
             <motion.h2
               className="text-white text-2xl sm:text-3xl md:text-4xl text-center lg:text-right leading-snug"
               initial={{ opacity: 0, x: -40 }}

@@ -39,7 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale}>
       <head>
-        <title>next-intl</title>
+        <title>landing-demo</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
