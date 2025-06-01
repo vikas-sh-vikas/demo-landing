@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import Image from "next/image";
+// import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
@@ -11,12 +11,13 @@ export default function Footer() {
         {/* Logo + Address */}
         <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
           <div className="mb-4">
-            <Image
-              src="/footer-logo.avif"
+            {/* <Image
+              src="/next.svg"
               alt="Mazoom Company Logo"
               width={120}
               height={60}
-            />
+            /> */}
+            <div className="text-2xl">Mad3wo</div>
           </div>
           <address className="not-italic text-sm">
             {t("address")}

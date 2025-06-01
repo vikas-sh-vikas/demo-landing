@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 import {
   Drawer,
   IconButton,
@@ -62,7 +62,9 @@ export default function Header() {
                   PaperProps={{ className: "w-64 p-4" }}
                 >
                   <Box className="flex justify-between items-center mb-4">
-                    <Image alt="logo" src="/next.svg" width={120} height={40} />
+                    {/* <Image alt="logo" src="/next.svg" width={120} height={40} /> */}
+                    <div className="text-2xl font-bold">Mad3wo</div>
+
                     <IconButton onClick={() => setDrawerOpen(false)}>
                       <FaTimes size={20} />
                     </IconButton>
@@ -86,13 +88,14 @@ export default function Header() {
                 </Drawer>
               </div>
               <div className="">
-                <Image
+                {/* <Image
                   alt="logo"
                   src="/next.svg"
                   width={150}
                   height={50}
                   priority
-                />
+                /> */}
+                <div className="text-2xl font-bold">Mad3wo</div>
               </div>
             </div>
           </div>
