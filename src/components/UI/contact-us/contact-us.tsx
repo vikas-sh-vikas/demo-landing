@@ -13,7 +13,7 @@ export default function ContactUs() {
           <h2 className="text-white text-3xl sm:text-4xl font-semibold mb-4">
             {t("header")}{" "}
           </h2>
-          <p className="text-white text-base sm:text-lg">{t("sub-header")}</p>
+          <p className="text-white text-base sm:text-lg text-center sm:text-left">{t("sub-header")}</p>
           <div className="mt-8">
             <button className="px-8 py-3 text-lg font-medium text-black hover:text-white bg-white hover:bg-black rounded-full hover:shadow-lg transition-shadow duration-300 cursor-pointer">
               {t("button")}{" "}

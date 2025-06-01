@@ -29,7 +29,7 @@ export default function Accordion({ data }: AccordionProps) {
                 hover:bg-white hover:text-black
               "
             >
-              <span className="text-lg">{item.title}</span>
+              <span className="text-lg text-left">{item.title}</span>
               <FaPlus
                 className={`
                   transition-transform duration-300
