@@ -1,65 +1,75 @@
 import React from "react";
 import Image from "next/image";
-
+import { useTranslations } from "next-intl";
+type CardModel = {
+  title: string;
+  subtitle: string;
+  imageUrl: string;
+  imageAlt: string;
+  backGround: string;
+};
 function CardDesign() {
+    const t = useTranslations("card-design")
+  const data: CardModel[] = [
+    {
+      title: t("card.0.title"),
+      subtitle: t("card.0.subtitle"),
+      imageUrl: "/card_1.webp",
+      imageAlt: "Design-Card-1",
+      backGround: "#ffefbd",
+    },
+    {
+      title: t("card.1.title"),
+      subtitle: t("card.1.subtitle"),
+      imageUrl: "/card_2.webp",
+      imageAlt: "Design-Card-2",
+      backGround: "#ffcc96",
+    },
+    {
+      title: t("card.2.title"),
+      subtitle: t("card.2.subtitle"),
+      imageUrl: "/card_3.webp",
+      imageAlt: "Design-Card-3",
+      backGround: "#c9cfe2",
+    },
+    {
+      title: t("card.3.title"),
+      subtitle: t("card.3.subtitle"),
+      imageUrl: "/card_4.webp",
+      imageAlt: "Design-Card-4",
+      backGround: "#e1f6d7",
+    },
+  ];
   return (
     <div className="m-[7rem]">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         What do you want to do today?
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-[#ffefbd] rounded-xl p-6 pb-0 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105">
-          <div className="text-2xl font-semibold mb-2">Make an invitation</div>
-          <div className="mb-4 text-gray-700">{"Let's get the party started."}</div>
-          <div className="relative w-full h-60 rounded-lg overflow-hidden">
-            <Image
-              alt="design-card"
-              src="/card_1.webp"
-              fill
-              className="object-contain object-center"
-              priority
-            />
-          </div>
-        </div>
-        <div className="bg-[#ffcc96] rounded-xl p-6 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105">
-          <div className="text-2xl font-semibold mb-2">Make an invitation</div>
-          <div className="mb-4 text-gray-700">{"Let's get the party started."}</div>
-          <div className="relative w-full h-60 rounded-lg overflow-hidden">
-            <Image
-              alt="design-card"
-              src="/card_2.webp"
-              fill
-              className="object-contain object-center"
-              priority
-            />
-          </div>
-        </div>
-        <div className="bg-[#c9cfe2] rounded-xl p-6 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105">
-          <div className="text-2xl font-semibold mb-2">Make an invitation</div>
-          <div className="mb-4 text-gray-700">{"Let's get the party started."}</div>
-          <div className="relative w-full h-60 rounded-lg overflow-hidden">
-            <Image
-              alt="design-card"
-              src="/card_3.webp"
-              fill
-              className="object-contain object-center"
-              priority
-            />
-          </div>
-        </div>
-        <div className="bg-[#e1f6d7] rounded-xl p-6 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105">
-          <div className="text-2xl font-semibold mb-2">Make an invitation</div>
-          <div className="mb-4 text-gray-700">{"Let's get the party started."}</div>
-          <div className="relative w-full h-60 rounded-lg overflow-hidden">
-            <Image
-              alt="design-card"
-              src="/card_4.webp"
-              fill
-              className="object-contain object-center"
-              priority
-            />
-          </div>
-        </div>
+        {data.map((item: CardModel, index: number) => {
+          return (
+            <div
+              key={index}
+              className={`bg-[${item.backGround}] rounded-xl p-6 pb-0 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
+            >
+              <div className="text-2xl font-semibold mb-2">
+                {item.title}
+              </div>
+              <div className="mb-4 text-gray-700">
+                {item.subtitle}
+              </div>
+              <div className="relative w-full h-80 rounded-lg overflow-hidden">
+                <Image
+                  alt={item.imageAlt}
+                  src={item.imageUrl}
+                  fill
+                  className="object-contain object-center"
+                  priority
+                />
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

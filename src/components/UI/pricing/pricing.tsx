@@ -27,7 +27,7 @@ const cardVariants = {
   hover: {
     scale: 1.05,
     boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.2)",
-    backgroundColor: "#f9d1b7",
+    backgroundColor: "#F6F1EC",
   },
 };
 

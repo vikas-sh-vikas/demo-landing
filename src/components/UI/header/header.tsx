@@ -78,7 +78,7 @@ export default function Header() {
                             setDrawerOpen(false);
                             handleScroll(text);
                           }}
-                          className="rounded-md mb-1 hover:bg-[#b9b89c] hover:text-white transition"
+                          className="rounded-md mb-1 hover:bg-[#BF9D84] hover:text-white transition"
                         >
                           <ListItemText primary={text} />
                         </ListItemButton>
@@ -101,12 +101,12 @@ export default function Header() {
           </div>
 
           {/* Desktop nav links */}
-          <nav className="justify-center gap-2 col-span-4 bg-white border border-gray-200 shadow-[0_4px_6px_-2px_#b9b89c] rounded-full px-8 py-3 items-center transition-shadow duration-200 ease-in-out hidden lg:flex space-x-4">
+          <nav className="justify-center gap-2 col-span-4 bg-white border border-gray-200 shadow-[0_4px_6px_-2px_#BF9D84] rounded-full px-8 py-3 items-center transition-shadow duration-200 ease-in-out hidden lg:flex space-x-4">
             {navItems.map((item: string) => (
               <div
                 key={item}
                 onClick={() => handleScroll(item)}
-                className="text-[14px] xl:text-[18px] hover:text-white hover:bg-[#b9b89c] px-2 py-1 rounded-full cursor-pointer"
+                className="text-[14px] xl:text-[18px] hover:text-white hover:bg-[#BF9D84] px-2 py-1 rounded-full cursor-pointer"
               >
                 {item}
               </div>

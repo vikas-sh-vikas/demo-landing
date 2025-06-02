@@ -6,7 +6,7 @@ export default function ContactUs() {
     const h = useTranslations("header");
   
   return (
-    <section id={h("6")} className="bg-[#ec7a30] px-4 sm:px-8 lg:px-32 py-12 md:py-16">
+    <section id={h("6")} className="bg-[#BF9D84] px-4 sm:px-8 lg:px-32 py-12 md:py-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
         {/* Title & Description */}
         <div className="md:col-span-2 flex flex-col items-center sm:items-center md:items-start">

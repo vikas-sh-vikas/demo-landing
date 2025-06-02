@@ -87,11 +87,11 @@ export default function Customers() {
             variants={cardVariants}
           >
             <div className="p-8">
-              <FaQuoteRight size={"30px"} className="text-[#ec7a30] mb-4" />
+              <FaQuoteRight size={"30px"} className="text-[#BF9D84] mb-4" />
               <p className="text-md font-semibold text-right mb-2">{t.quote}</p>
               <p className="text-sm text-right text-gray-600">{t.feedback}</p>
             </div>
-            <div className="bg-[#ec7a30] text-white px-6 py-4 text-sm">
+            <div className="bg-[#BF9D84] text-white px-6 py-4 text-sm">
               {t.author}
             </div>
           </motion.div>

@@ -62,7 +62,7 @@ function HomeBanner() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            <button className="bg-[#ec7a30] hover:bg-[#d46823] transition-colors px-10 sm:px-16 py-3 text-white text-base sm:text-lg rounded-full shadow-md">
+            <button className="bg-[#BF9D84] hover:bg-[#F6F1EC] transition-colors px-10 sm:px-16 py-3 text-white hover:text-gray-600 text-base sm:text-lg rounded-full shadow-md">
               {t("button")}
             </button>
           </motion.div>

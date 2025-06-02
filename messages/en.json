@@ -150,5 +150,33 @@
     "Customers",
     "Pricing",
     "Contact us"
-  ]
+  ],
+  "card-design" : {
+    "title" :"What do you want to do today?",
+    "card": [
+      {
+        "title":"Make an invitation",
+        "subtitle":"Let's get the party started."
+      },
+      {
+        "title":"Upload your own",
+        "subtitle":"Add your own design and photos."
+      },
+      {
+        "title":"Personalize a Grad invitation",
+        "subtitle":"Upload a photo or your own design."
+      },
+      {
+        "title":"Send a Greeting Card",
+        "subtitle":"A quickest way to show them you care."
+      }
+    ]
+  },
+  "purchase-banner" : 
+  {
+    "title":"Upgrade to Pro",
+    "sub-title":"It pays to go pro",
+    "paragraph":"Unlock infinite events and unlimited access to all of our Premium features at one all-inclusive price.",
+    "button-text":"Start planning"
+  }
 }
