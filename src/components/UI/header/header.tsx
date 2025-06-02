@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-// import Image from "next/image";
+import Image from "next/image";
 import {
   Drawer,
   IconButton,
-  List,
+  List, 
   ListItem,
   ListItemButton,
   ListItemText,
@@ -62,8 +62,8 @@ export default function Header() {
                   PaperProps={{ className: "w-64 p-4" }}
                 >
                   <Box className="flex justify-between items-center mb-4">
-                    {/* <Image alt="logo" src="/next.svg" width={120} height={40} /> */}
-                    <div className="text-2xl font-bold">Mad3wo</div>
+                    <Image alt="logo" src="/mad3wo_logo.svg" width={70} height={70} />
+                    {/* <div className="text-2xl font-bold">Mad3wo</div> */}
 
                     <IconButton onClick={() => setDrawerOpen(false)}>
                       <FaTimes size={20} />
@@ -78,7 +78,7 @@ export default function Header() {
                             setDrawerOpen(false);
                             handleScroll(text);
                           }}
-                          className="rounded-md mb-1 hover:bg-[#ec7a30] hover:text-white transition"
+                          className="rounded-md mb-1 hover:bg-[#b9b89c] hover:text-white transition"
                         >
                           <ListItemText primary={text} />
                         </ListItemButton>
@@ -88,25 +88,25 @@ export default function Header() {
                 </Drawer>
               </div>
               <div className="">
-                {/* <Image
+                 <Image
                   alt="logo"
-                  src="/next.svg"
-                  width={150}
-                  height={50}
+                  src="/mad3wo_logo.svg"
+                  width={70}
+                  height={70}
                   priority
-                /> */}
-                <div className="text-2xl font-bold">Mad3wo</div>
+                /> 
+                {/* <div className="text-2xl font-bold">Mad3wo</div> */}
               </div>
             </div>
           </div>
 
           {/* Desktop nav links */}
-          <nav className="justify-center gap-2 col-span-4 bg-white border border-gray-200 shadow-[0_4px_6px_-2px_rgba(236,122,48,0.3)] rounded-full px-8 py-3 items-center transition-shadow duration-200 ease-in-out hidden lg:flex space-x-4">
+          <nav className="justify-center gap-2 col-span-4 bg-white border border-gray-200 shadow-[0_4px_6px_-2px_#b9b89c] rounded-full px-8 py-3 items-center transition-shadow duration-200 ease-in-out hidden lg:flex space-x-4">
             {navItems.map((item: string) => (
               <div
                 key={item}
                 onClick={() => handleScroll(item)}
-                className="text-[14px] xl:text-[18px] hover:text-white hover:bg-[#ec7a30] px-2 py-1 rounded-full cursor-pointer"
+                className="text-[14px] xl:text-[18px] hover:text-white hover:bg-[#b9b89c] px-2 py-1 rounded-full cursor-pointer"
               >
                 {item}
               </div>

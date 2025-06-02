@@ -1,4 +1,5 @@
 import BusinessSolution from "@/components/UI/business-solution/business-solution";
+import CardDesign from "@/components/UI/card-design/card-design";
 import ContactUs from "@/components/UI/contact-us/contact-us";
 import Customers from "@/components/UI/customers/customers";
 import Feature from "@/components/UI/feature/feature";
@@ -10,6 +11,7 @@ export default function Home() {
     <div>
       <HomeBanner />
       <Invitation />
+      <CardDesign />
       <Feature />
       <Customers />
       <Pricing />
