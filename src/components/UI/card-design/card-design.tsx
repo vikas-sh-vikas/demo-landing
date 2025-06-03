@@ -41,7 +41,7 @@ function CardDesign() {
     },
   ];
   return (
-    <div className="m-[7rem]">
+    <div className="m-3 md:m-[3rem] lg:m-[7rem]">
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         {t("title")}
       </h2>

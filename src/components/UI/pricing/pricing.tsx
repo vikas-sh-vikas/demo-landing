@@ -78,7 +78,7 @@ function Pricing() {
   ];
 
   return (
-    <div id={h("5")} className="max-w-5xl m-auto py-16">
+    <div id={h("6")} className="max-w-5xl m-auto py-16">
       <motion.div
         className="text-[3.5rem] text-center pb-8"
         initial={{ opacity: 0, y: -20 }}

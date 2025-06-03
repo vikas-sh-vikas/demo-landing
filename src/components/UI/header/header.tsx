@@ -30,7 +30,7 @@ export default function Header() {
   };
 
   const t = useTranslations("header");
-  const navItems = [t("0"), t("1"), t("2"), t("3"), t("4"), t("5"), t("6")];
+  const navItems = [t("0"), t("1"), t("2"), t("3"), t("4"), t("5"), t("6"),t("7")];
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [lang, setLang] = useState<"en" | "ar">(locale as "en" | "ar");
   const handleScroll = (targetId: string) => {
@@ -45,7 +45,7 @@ export default function Header() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <div className="flex gap-3">
-              <div className="lg:hidden block">
+              <div className="lg:hidden block m-auto">
                 {/* Hamburger on mobile */}
                 <IconButton
                   className="md:hidden"
