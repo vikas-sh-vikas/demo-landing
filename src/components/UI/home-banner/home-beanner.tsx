@@ -19,7 +19,7 @@ function HomeBanner() {
           transition={{ duration: 0.7 }}
         >
           <motion.h1
-            className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem]"
+            className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-sans"
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
