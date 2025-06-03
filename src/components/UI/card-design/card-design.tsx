@@ -50,7 +50,8 @@ function CardDesign() {
           return (
             <div
               key={index}
-              className={`bg-[${item.backGround}] rounded-xl p-6 pb-0 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
+                style={{ backgroundColor: item.backGround }}
+              className={`rounded-xl p-6 pb-0 overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
             >
               <div className="text-2xl font-semibold mb-2">
                 {item.title}
