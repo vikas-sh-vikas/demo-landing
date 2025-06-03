@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGoogle, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import { FaFacebook,  FaInstagram,  FaTwitter, FaWhatsapp } from "react-icons/fa";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
@@ -22,7 +22,6 @@ export default function Footer() {
           <address className="not-italic text-sm">
             {t("address")}
             <br></br>
-            {t("address1")}
           </address>
         </div>
 
@@ -45,11 +44,18 @@ export default function Footer() {
           {/* Social Icons */}
           <div className="flex gap-3">
             <a
-              href="https://www.google.com"
+              href="https://www.x.com/"
               aria-label="Google"
               className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition"
             >
-              <FaGoogle size={20} />
+              <FaTwitter size={20} />
+            </a>
+            <a
+              href="https://www.facebook.com/"
+              aria-label="Google"
+              className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition"
+            >
+              <FaFacebook size={20} />
             </a>
             <a
               href="https://www.instagram.com"
@@ -59,7 +65,7 @@ export default function Footer() {
               <FaInstagram size={20} />
             </a>
             <a
-              href="https://wa.me/9665052787"
+              href="https://wa.me/966550538840?text=مرحبًا، أود طلب تصميم خاص من مدعو."
               aria-label="WhatsApp"
               className="bg-white text-black rounded-full p-2 hover:bg-gray-200 transition"
             >

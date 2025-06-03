@@ -23,7 +23,7 @@ export default function Accordion({ data }: AccordionProps) {
               onClick={() => toggle(idx)}
               className="
                 w-full flex justify-between items-center
-                bg-black text-white rounded-full
+                bg-black text-white rounded-2xl
                 p-4
                 transition-colors duration-200
                 hover:bg-white hover:text-black

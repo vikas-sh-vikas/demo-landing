@@ -136,11 +136,10 @@
     "hours": "Working hours",
     "time": "9 AM — 6 PM",
     "phone": "Phone",
-    "phone-no": " +966 505 2787"
+    "phone-no": "+966 55 053 8840"
   },
   "footer": {
-    "address": "Mad3wo  Company - Riyadh,",
-    "address1": "Saudi Arabia At Takhassusi Street"
+    "address": "Riyadh, Saudi Arabia"
   },
   "header": [
     "Log In",
@@ -156,20 +155,20 @@
     "title" :"What do you want to do today?",
     "card": [
       {
-        "title":"Make an invitation",
-        "subtitle":"Let's get the party started."
+        "title":"Edit from your phone",
+        "subtitle":"Let's directly from your phone."
       },
       {
-        "title":"Upload your own",
+        "title":"Share via WhatsApp",
+        "subtitle":"Easy sahre via WhatsApp ."
+      },
+      {
+        "title":"Entry QR Generate",
+        "subtitle":"Generate QR for entry."
+      },
+      {
+        "title":"Create and customize",
         "subtitle":"Add your own design and photos."
-      },
-      {
-        "title":"Personalize a Grad invitation",
-        "subtitle":"Upload a photo or your own design."
-      },
-      {
-        "title":"Send a Greeting Card",
-        "subtitle":"A quickest way to show them you care."
       }
     ]
   },
