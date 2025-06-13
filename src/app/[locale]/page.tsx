@@ -1,13 +1,14 @@
 "use client"
-import BusinessSolution from "@/components/UI/business-solution/business-solution";
+// import BusinessSolution from "@/components/UI/business-solution/business-solution";
 import CardDesign from "@/components/UI/card-design/card-design";
-import ContactUs from "@/components/UI/contact-us/contact-us";
+// import ContactUs from "@/components/UI/contact-us/contact-us";
 import Customers from "@/components/UI/customers/customers";
 import Feature from "@/components/UI/feature/feature";
 import HomeBanner from "@/components/UI/home-banner/home-beanner";
+import HowItWorks from "@/components/UI/how-it-works/how-it-works";
 import Invitation from "@/components/UI/invitation/invitation";
-import Pricing from "@/components/UI/pricing/pricing";
-import PurchaseBanner from "@/components/UI/purchase-banner/purchase-banner";
+// import Pricing from "@/components/UI/pricing/pricing";
+// import PurchaseBanner from "@/components/UI/purchase-banner/purchase-banner";
 export default function Home() {
 // useEffect(() => {
 //     const fetchConfig = async () => {
@@ -36,14 +37,15 @@ export default function Home() {
   return (
     <div>
       <HomeBanner />
-      <Invitation />
       <CardDesign />
-      <Feature />
-      <PurchaseBanner />
+      <HowItWorks />
       <Customers />
-      <Pricing />
-      <BusinessSolution />
-      <ContactUs />
+      <Feature />
+      <Invitation />
+      {/* <PurchaseBanner /> */}
+      {/* <Pricing /> */}
+      {/* <BusinessSolution /> */}
+      {/* <ContactUs /> */}
     </div>
   );
 }

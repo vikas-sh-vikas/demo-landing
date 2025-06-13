@@ -19,7 +19,7 @@ function PurchaseBanner() {
           <div className="pb-6 text-base md:text-lg text-gray-700">
             {t("paragraph")}
           </div>
-          <button className="px-8 py-3 text-base md:text-lg font-medium text-white hover:text-black bg-black hover:bg-white rounded-full hover:shadow-lg transition duration-300 cursor-pointer">
+          <button className="px-8 py-3 text-base md:text-lg font-medium text-white hover:text-black bg-[#BF9D84] hover:bg-white rounded-full hover:shadow-lg transition duration-300 cursor-pointer">
             {t("button-text")}
           </button>
         </div>

@@ -29,17 +29,12 @@ export default function Feature() {
         "title": t("accordion.3.title"),
         "contentTitle": t("accordion.3.contentTitle"),
         "contentBody": t("accordion.3.contentBody")
-      },
-      {
-        "title": t("accordion.4.title"),
-        "contentTitle": t("accordion.4.contentTitle"),
-        "contentBody": t("accordion.4.contentBody")
-      },
+      }
     ];
   
   return (
     <motion.section id={h("3")}
-      className="bg-black ml-8 md:ml-28 my-16 rounded-3xl rounded-r-none overflow-hidden"
+      className="bg-[#F9F5F0] overflow-hidden py-16"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
@@ -49,7 +44,7 @@ export default function Feature() {
         {/* Text + Accordion */}
         <div className="lg:col-span-4 space-y-6 mx-auto lg:max-w-[40vw]">
           <motion.h2
-            className="text-white text-2xl sm:text-3xl md:text-4xl text-center lg:text-right leading-snug"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 pb-4"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -57,6 +52,15 @@ export default function Feature() {
           >
             {t("title")}
           </motion.h2>
+          {/* <motion.h2
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800"
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
+            {t("title1")}
+          </motion.h2> */}
 
           <motion.div
             initial={{ opacity: 0, x: -40 }}

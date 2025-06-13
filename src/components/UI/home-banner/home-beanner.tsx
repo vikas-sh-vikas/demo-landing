@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import { FaApple, FaGooglePlay } from "react-icons/fa";
+import { FaApple, FaGooglePlay, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 
@@ -9,86 +9,84 @@ function HomeBanner() {
   const t = useTranslations("home-banner");
   const h = useTranslations("header");
   return (
-    <div id={h("1")} className="px-4 sm:px-8 md:px-[7rem]">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-center">
+    <div id={h("1")} className="px-4 sm:px-8 md:px-[7rem] py-12 md:py-24 bg-white">
+      <div className="grid grid-cols-1 lg:grid-cols-5 items-center">
         {/* Text Content */}
         <motion.div
-          className="md:col-span-3 text-center md:text-right space-y-6"
+          className="md:col-span-3 text-center md:text-left space-y-8 pb-4"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
         >
           <motion.h1
-            className="text-[2rem] sm:text-[2.5rem] md:text-[3.5rem] font-sans"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight"
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            {t("header")}
-            <br></br>
-            {t("header1")}
+            <span className="block">{t("header")}</span>
+            <span className="block mt-2 text-[#BF9D84]">
+              {t("header1")}
+            </span>
           </motion.h1>
 
-          <motion.p
-            className="text-base sm:text-lg leading-relaxed text-gray-700"
+          {/* <motion.p
+            className="text-lg text-gray-600 max-w-2xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
           >
             {t("paragraph")}
-          </motion.p>
+          </motion.p> */}
 
-          {/* App Buttons */}
+          {/* Single Strong CTA Button */}
           <motion.div
-            className="flex justify-center md:justify-end gap-4"
+            className="pt-2"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
+            <button className="group relative bg-gradient-to-r from-[#BF9D84] to-[#a8866f] hover:from-[#a8866f] hover:to-[#8d6e58] text-white text-xl font-bold px-10 py-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3 mx-auto md:mx-0">
+              <span className="text-xl md:text-2xl">{t("button")}</span>
+              <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+            </button>
+          </motion.div>
+
+          {/* App Buttons - Smaller and below main CTA */}
+          <motion.div
+            className="flex justify-center md:justify-start gap-4"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <button className="flex gap-3 items-center bg-black text-white text-base sm:text-lg px-6 py-3 rounded-full shadow-lg">
-              <FaGooglePlay size={20} />
-              Google Play
+            <button className="flex gap-2 items-center bg-black hover:bg-gray-800 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
+              <FaGooglePlay size={16} />
+              <span>Google Play</span>
             </button>
-            <button className="flex gap-3 items-center bg-black text-white text-base sm:text-lg px-6 py-3 rounded-full shadow-lg">
-              <FaApple size={20} />
-              App Store
-            </button>
-          </motion.div>
-
-          {/* Contact Button */}
-          <motion.div
-            className="pt-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
-          >
-            <button className="bg-[#BF9D84] hover:bg-[#F6F1EC] transition-colors px-10 sm:px-16 py-3 text-white hover:text-gray-600 text-base sm:text-lg rounded-full shadow-md">
-              {t("button")}
+            <button className="flex gap-2 items-center bg-black hover:bg-gray-800 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
+              <FaApple size={16} />
+              <span>App Store</span>
             </button>
           </motion.div>
         </motion.div>
 
-        {/* Image */}
+        {/* Tilted Image - Fixed tilt with no background */}
         <motion.div
-          className="relative w-full h-full aspect-[4/4] sm:h-[500px] md:h-[800px] md:col-span-2 overflow-visible"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          style={{
-            transformOrigin: "center center",
-            // Optional padding so the rotated edges don't bump the grid gap:
-            // padding: "2rem",
-          }}
+          className="relative w-full h-full aspect-square md:col-span-2"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.7 }}
         >
           <Image
             alt="banner-gif"
             src="/whatsapp.gif"
             fill
-            style={{
+            style={{ 
               objectFit: "contain",
-              objectPosition: "center",
-              transform: "rotate(-2deg)",
+              transform: "rotate(-5deg)"
             }}
+            // className="drop-shadow-lg"
             priority
           />
         </motion.div>

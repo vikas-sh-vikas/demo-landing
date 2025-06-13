@@ -1,44 +1,56 @@
 {
   "home-banner": {
-    "header": "Mad3wo  invitations",
-    "header1": "Best way to invite",
-    "paragraph": "Your guests will enjoy high privacy and hassle-free use without any app downloads or links. Elevate your event planning today with us.",
-    "button": "Contact Us"
+    "header": "Send Elegant WhatsApp Invitations in Seconds –",
+    "header1": "For Weddings, Parties & More",
+    "button": "Try Mad3wo Now"
   },
   "invitation": {
-    "title": "Want to see how your guest will receive the invite ? and how to track it ?",
+    "title": "Want to see how your guest will receive the invite ?",
+    "title1":"and how to track it ?",
     "button": "Try Now"
   },
   "features": {
     "title": "All you need to manage your events",
     "accordion": [
       {
-        "title": "No Links",
-        "contentTitle": "No links, and bothersome pages to work with.",
-        "contentBody": "The invitation will be sent directly to your guest's WhatsApp, and they can respond in chat."
+        "title": "Send invitations via WhatsApp with one click",
+        "contentTitle": "Easily send invitations",
+        "contentBody": "Share the invitation with your guests directly via WhatsApp in just one click. No need for traditional methods — speed and ease at your fingertips."
       },
       {
-        "title": "Direct Location Sharing",
-        "contentTitle": "Location sharing",
-        "contentBody": "with a click of a button , the location will be shared , adding convenience for your recipients."
+        "title": "Track attendance and invite effortlessly",
+        "contentTitle": "Full control over attendance and invitations",
+        "contentBody": "Monitor RSVP status in real-time and send reminders with a single click. A smart system that simplifies managing your guests professionally."
       },
       {
-        "title": "RSVP feature",
-        "contentTitle": "Manage your attendees with RSVP",
-        "contentBody": "Miscalculation? Not a problem anymore! You will know who is attending and who is not, so you can manage your resources perfectly."
+        "title": "Elegant templates ready to customize",
+        "contentTitle": "Designs that match your style",
+        "contentBody": "Choose from a collection of beautiful, ready-made templates. Customize colors and texts to reflect your unique style and event."
       },
       {
-        "title": "Unique QR code for each guest",
-        "contentTitle": "unique QR code for each guest",
-        "contentBody": "For your event privacy"
-      },
-      {
-        "title": "Guest Message",
-        "contentTitle": "Guest Message",
-        "contentBody": "Guest Message."
+        "title": "Unique barcode for hall entry",
+        "contentTitle": "Smooth and secure entry with barcode",
+        "contentBody": "Each guest receives a unique barcode to simplify entry to the venue. Say goodbye to chaos and welcome your guests with elegance and organization."
       }
     ]
   },
+  "how_it_works": {
+        "header":"How Mad3wo Works",
+    "subtitle":"3 simple steps to send your smart invitation",
+    "steps":[
+    {
+      "title": "Choose your favorite invitation design",
+      "icon": "/1.png"
+    },
+    {
+      "title": "Enter event details and guest list",
+      "icon": "/2.png"
+    },
+    {
+      "title": "Send via WhatsApp and track RSVPs",
+      "icon": "/3.png"
+    }
+  ]},
   "customers": {
     "title": "What our customers say about us",
     "tesimonials": [
@@ -139,7 +151,18 @@
     "phone-no": "+966 55 053 8840"
   },
   "footer": {
-    "address": "Riyadh, Saudi Arabia"
+    "contact_title": "Contact Us",
+    "links_title": "Quick Links",
+    "social_title": "Follow Us",
+    "social_description": "Stay updated with our latest designs and offers",
+    "description": "Premium custom designs tailored to your unique style and requirements",
+    "phone": "+966 55 123 4567",
+    "email": "support@mad3wo.com",
+    "whatsapp": "Chat on WhatsApp",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy",
+    "support": "Contact Support",
+    "copyright": "All rights reserved."
   },
   "header": [
     "Log In",
@@ -151,32 +174,31 @@
     "Pricing",
     "Contact us"
   ],
-  "card-design" : {
-    "title" :"What do you want to do today?",
+  "card-design": {
+    "title": "Why Mad3wo?",
     "card": [
       {
-        "title":"Edit from your phone",
-        "subtitle":"Let's directly from your phone."
+        "title": "Edit from your phone",
+        "subtitle": "Let's directly from your phone."
       },
       {
-        "title":"Share via WhatsApp",
-        "subtitle":"Easy sahre via WhatsApp ."
+        "title": "Share via WhatsApp",
+        "subtitle": "Easy sahre via WhatsApp ."
       },
       {
-        "title":"Entry QR Generate",
-        "subtitle":"Generate QR for entry."
+        "title": "Entry QR Generate",
+        "subtitle": "Generate QR for entry."
       },
       {
-        "title":"Create and customize",
-        "subtitle":"Add your own design and photos."
+        "title": "Create and customize",
+        "subtitle": "Add your own design and photos."
       }
     ]
   },
-  "purchase-banner" : 
-  {
-    "title":"Upgrade to Pro",
-    "sub-title":"It pays to go pro",
-    "paragraph":"Unlock infinite events and unlimited access to all of our Premium features at one all-inclusive price.",
-    "button-text":"Start planning"
+  "purchase-banner": {
+    "title": "Upgrade to Pro",
+    "sub-title": "It pays to go pro",
+    "paragraph": "Unlock infinite events and unlimited access to all of our Premium features at one all-inclusive price.",
+    "button-text": "Start planning"
   }
 }
