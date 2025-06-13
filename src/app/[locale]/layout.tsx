@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "../globals.css";
 
 import { ReactNode } from "react";
@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Metadata } from "next";
 import Header from "@/components/UI/header/header";
 import Footer from "@/components/UI/footer/footer";
+const inter = Inter({ subsets: ['latin'], variable: '--font-en' });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,7 +39,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={`${inter.variable}`}>
       <head>
         <title>landing-demo</title>
       </head>
