@@ -1,10 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { FaArrowRight } from "react-icons/fa";
+import TryNowModal from "../modal/try-now-modal";
 
 export default function Invitation() {
+    const [tryNowModal,setTryNowModal] = useState(false)
+  
   const t = useTranslations("invitation");
   const h = useTranslations("header");
   
@@ -56,12 +59,15 @@ export default function Invitation() {
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <button className="group bg-gradient-to-r from-white to-[#f0f0f0] text-[#8d6e58] text-xl font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3">
+          <button className="group bg-gradient-to-r from-white to-[#f0f0f0] text-[#8d6e58] text-xl font-bold px-10 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3" onClick={() =>setTryNowModal(true)}>
             <span>{t("button")}</span>
             <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
           </button>
         </motion.div>
       </div>
+            <TryNowModal 
+        open={tryNowModal}
+        onClose={() => setTryNowModal(false)} />
     </motion.div>
   );
 }

@@ -1,13 +1,16 @@
 "use client";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import { FaApple, FaGooglePlay, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
+import TryNowModal from "../modal/try-now-modal";
 
 function HomeBanner() {
+  const [tryNowModal,setTryNowModal] = useState(false)
   const t = useTranslations("home-banner");
   const h = useTranslations("header");
+  console.log("Modal flag",tryNowModal)
   return (
     <div id={h("1")} className="px-4 sm:px-8 md:px-[7rem] py-12 md:py-24 bg-white">
       <div className="grid grid-cols-1 lg:grid-cols-5 items-center">
@@ -46,7 +49,8 @@ function HomeBanner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <button className="group relative bg-gradient-to-r from-[#BF9D84] to-[#a8866f] hover:from-[#a8866f] hover:to-[#8d6e58] text-white text-xl font-bold px-10 py-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3 mx-auto md:mx-0">
+            <button className="group relative bg-gradient-to-r from-[#BF9D84] to-[#a8866f] hover:from-[#a8866f] hover:to-[#8d6e58] text-white text-xl font-bold px-10 py-5 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl flex items-center justify-center gap-3 mx-auto md:mx-0" onClick={() => setTryNowModal(true)}
+>
               <span className="text-xl md:text-2xl">{t("button")}</span>
               <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
               <div className="absolute inset-0 rounded-full bg-white opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
@@ -91,7 +95,10 @@ function HomeBanner() {
           />
         </motion.div>
       </div>
-    </div>
+      <TryNowModal 
+        open={tryNowModal}
+        onClose={() => setTryNowModal(false)}
+      />    </div>
   );
 }
 
