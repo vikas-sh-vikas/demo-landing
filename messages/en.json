@@ -200,5 +200,18 @@
     "sub-title": "It pays to go pro",
     "paragraph": "Unlock infinite events and unlimited access to all of our Premium features at one all-inclusive price.",
     "button-text": "Start planning"
+  },
+  "try_now":{
+    "header":"Get Started",
+    "phone":"Phone Number",
+    "phone-sub":"We'll send a verification code to this number",
+    "phone-button":"Send Verification Code",
+    "phone-button-loading":"Sending...",
+    "varify":"Enter Verification Code",
+    "varify-sub":"Enter the 6-digit code sent to",
+    "varify-button":"Verify Code",
+    "varify-button-loading":"Verifying...",
+    "varify-again":"Resend Code or Change Number",
+    "varify-agree":"By continuing, you agree to our Terms of Service and Privacy Policy"
   }
 }
