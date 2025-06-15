@@ -120,6 +120,7 @@ function TryNowModal({ open, onClose }: ModalProps) {
       if (response.statusCode !== 200) {
         {
           setError("otp not match");
+                setIsLoading(false);
         }
       } else {
         // toast.success("OTP verified successfully");
@@ -128,6 +129,8 @@ function TryNowModal({ open, onClose }: ModalProps) {
       }
     } catch (error) {
       console.log("error", error);
+            setIsLoading(false);
+
     }
   };
   const sendInvitation = async () => {
