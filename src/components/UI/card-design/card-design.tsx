@@ -45,7 +45,7 @@ function CardDesign() {
   ];
 
   return (
-    <div className="bg-[#BF9D84] py-[100px] px-4 md:px-8">
+    <div className="bg-gradient-to-bl from-[#F6F1EC] to-[#BF9D84] py-[100px] px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white pb-4">
           {t("title")}
@@ -55,27 +55,27 @@ function CardDesign() {
           {data.map((item: CardModel, index: number) => (
             <div
               key={index}
-              className="relative rounded-2xl overflow-hidden bg-white"
-              style={{
-                backgroundColor: item.backGround,
-              }}
+              className="relative"
+              // style={{
+              //   backgroundColor: item.backGround,
+              // }}
             >
               {/* Maintain consistent image height */}
-              <div className="w-full aspect-[3/4] flex items-center justify-center p-4">
+              <div className="w-full aspect-[3/4] flex items-center justify-center">
                 <Image
                   src={item.imageUrl}
                   alt={item.imageAlt}
                   width={300}
                   height={400}
-                  className="object-contain w-full h-full transition-transform duration-300 hover:scale-105"
+                  className="object-contain w-full h-full transition-transform duration-300 hover:scale-105 rounded-2xl overflow-hidden"
                   priority
                 />
               </div>
               {/* Optional: add title/subtitle inside card */}
-              <div className="px-4 pb-4 text-center">
+              {/* <div className="px-4 pb-4 text-center">
                 <h3 className="text-lg font-semibold">{item.title}</h3>
                 <p className="text-sm text-gray-600">{item.subtitle}</p>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

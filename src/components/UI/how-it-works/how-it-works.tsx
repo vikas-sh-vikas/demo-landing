@@ -25,7 +25,7 @@ export default function HowItWorks() {
     ];
     
   return (
-    <section id="how-it-works" className="bg-[#F9F5F0] py-[100px] px-4 sm:px-8 md:px-16">
+    <section id="how-it-works" className="bg-gradient-to-br from-gray-50 to-gray-100 py-[100px] px-4 sm:px-8 md:px-16">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,9 +33,9 @@ export default function HowItWorks() {
         viewport={{ once: true }}
         className="text-center mb-12 pb-4" 
       >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#BF9D84] mb-2">
 {t("header")}        </h2>
-        <p className="text-md text-gray-600">{t("subtitle")}</p>
+        <p className="text-md text-gray-500">{t("subtitle")}</p>
       </motion.div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
@@ -56,7 +56,7 @@ export default function HowItWorks() {
                 className="object-contain"
               />
             </div>
-            <h2 className="text-lg font-semibold text-gray-700 mb-2">{step.title}</h2>
+            <h2 className="text-lg font-semibold text-gray-500 mb-2">{step.title}</h2>
             {/* <p className="text-sm text-[#777]">{step.titleAr}</p> */}
           </motion.div>
         ))}
