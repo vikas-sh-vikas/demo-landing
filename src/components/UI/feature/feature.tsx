@@ -76,7 +76,7 @@ export default function Feature() {
           >
             <div className="absolute inset-4 rounded-xl overflow-hidden borde">
               <Image
-                src="/feature.avif"
+                src="/feature.gif"
                 alt="Feature illustration"
                 fill
                 style={{
