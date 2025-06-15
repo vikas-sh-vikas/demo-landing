@@ -84,11 +84,11 @@ function HomeBanner() {
         >
           <Image
             alt="banner-gif"
-            src="/whatsapp.gif"
+            src="/banner.gif"
             fill
             style={{ 
               objectFit: "contain",
-              transform: "rotate(-5deg)"
+              // transform: "rotate(-5deg)"
             }}
             // className="drop-shadow-lg"
             priority
