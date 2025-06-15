@@ -78,7 +78,7 @@ export default function Header() {
                             setDrawerOpen(false);
                             handleScroll(text);
                           }}
-                          className="rounded-md mb-1 hover:bg-[#BF9D84] hover:text-white transition"
+                          className="rounded-md text-gray-600 mb-1 hover:bg-[#BF9D84] hover:text-white transition"
                         >
                           <ListItemText primary={text} />
                         </ListItemButton>
@@ -106,7 +106,7 @@ export default function Header() {
               <div
                 key={item}
                 onClick={() => handleScroll(item)}
-                className="text-[14px] xl:text-[18px] hover:text-white hover:bg-[#BF9D84] px-2 py-1 rounded-full cursor-pointer"
+                className="text-[14px] xl:text-[18px] text-gray-600 hover:text-white hover:bg-[#BF9D84] px-2 py-1 rounded-full cursor-pointer"
               >
                 {item}
               </div>

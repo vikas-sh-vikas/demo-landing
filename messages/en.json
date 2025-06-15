@@ -204,6 +204,7 @@
   "try_now":{
     "header":"Get Started",
     "phone":"Phone Number",
+    "name":"Name",
     "phone-sub":"We'll send a verification code to this number",
     "phone-button":"Send Verification Code",
     "phone-button-loading":"Sending...",

@@ -22,7 +22,7 @@ function HomeBanner() {
           transition={{ duration: 0.7 }}
         >
           <motion.h1
-            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-700 leading-tight"
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6 }}
@@ -64,11 +64,11 @@ function HomeBanner() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-            <button className="flex gap-2 items-center bg-black hover:bg-gray-800 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
+            <button className="flex gap-2 items-center bg-gray-800 hover:bg-gray-600 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
               <FaGooglePlay size={16} />
               <span>Google Play</span>
             </button>
-            <button className="flex gap-2 items-center bg-black hover:bg-gray-800 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
+            <button className="flex gap-2 items-center bg-gray-800 hover:bg-gray-600 text-white text-sm sm:text-base px-6 py-4 rounded-full shadow-md transition-all duration-300 hover:scale-105">
               <FaApple size={16} />
               <span>App Store</span>
             </button>

@@ -22,14 +22,14 @@ export default function Footer() {
             <p className="text-gray-400 mb-4 max-w-xs">
               {t("description")}
             </p>
-            <div className="flex gap-4">
+            {/* <div className="flex gap-4">
               <a href="#" className="text-gray-400 hover:text-[#BF9D84] transition">
                 <FaFileContract size={20} />
               </a>
               <a href="#" className="text-gray-400 hover:text-[#BF9D84] transition">
                 <FaShieldAlt size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Info */}

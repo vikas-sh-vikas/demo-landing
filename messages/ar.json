@@ -205,6 +205,7 @@
   "try_now": {
     "header": "ابدأ",
     "phone": "رقم الهاتف",
+    "name":"الاسم",
     "phone-sub": "سنرسل رمز التحقق إلى هذا الرقم",
     "phone-button": "إرسال رمز التحقق",
     "phone-button-loading": "جارٍ الإرسال...",

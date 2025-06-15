@@ -35,7 +35,9 @@ function TryNowModal({ open, onClose }: ModalProps) {
     setIsModalOpen(false);
     onClose();
   };
+
   const [phone, setPhone] = useState<string | undefined>("");
+  const [name, setName] = useState<string | undefined>("");
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -53,13 +55,17 @@ function TryNowModal({ open, onClose }: ModalProps) {
     setPhone("");
     setOtpSent(false);
     setOtp("");
+    setName("");
     setError("");
     setIsLoading(false);
   };
-  console.log("phone", phone);
   const sendOTP = async () => {
     if (!phone) {
       setError("Please enter a valid phone number");
+      return;
+    }
+    if (!name) {
+      setError("Please enter name");
       return;
     }
 
@@ -71,13 +77,12 @@ function TryNowModal({ open, onClose }: ModalProps) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          userId: "USER_1749103669232",
+          userId: phone,
           to: phone.replace("+", ""),
         }),
       });
       // const data = await res.json();
       const { response } = await res.json();
-      console.log("statusCode", response.statusCode);
       if (response.statusCode !== 200) {
         {
           setError("Enter valid mobile no.");
@@ -107,19 +112,47 @@ function TryNowModal({ open, onClose }: ModalProps) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          userId: "USER_1749103669232",
+          userId: phone,
           otp: otp,
         }),
       });
       const { response } = await res.json();
-      console.log("statusCode", response.statusCode);
       if (response.statusCode !== 200) {
         {
           setError("otp not match");
         }
       } else {
+        // toast.success("OTP verified successfully");
+            sendInvitation();
+
+      }
+    } catch (error) {
+      console.log("error", error);
+    }
+  };
+  const sendInvitation = async () => {
+    try {
+      // setIsLoading(true);
+      const res = await fetch("/api/send-invitation", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: name,
+          mobileNo: phone,
+        }),
+      });
+      const { response } = await res.json();
+      if (response.statusCode !== 200) {
+        {
+          setError("something went wrong");
+        }
+      } else {
         toast.success("OTP verified successfully");
-        handleClose();
+        setIsModalOpen(false);
+        onClose();
+        // handleClose();
       }
     } catch (error) {
       console.log("error", error);
@@ -138,6 +171,22 @@ function TryNowModal({ open, onClose }: ModalProps) {
       <div className="space-y-4">
         {!otpSent ? (
           <>
+            <label
+              htmlFor="name"
+              className="block text-sm font-medium text-gray-700"
+            >
+              {t("name")}
+            </label>
+            <div className="flex items-center space-x-2">
+              <input
+                id="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className={`border border-[${primaryColor}] rounded-lg px-3 py-2 focus:ring focus:ring-[${primaryColor}] focus:border-[${primaryColor}] w-full`}
+                placeholder="name"
+              />
+            </div>
             <div className="space-y-2">
               <label
                 htmlFor="phone"
@@ -277,6 +326,9 @@ function TryNowModal({ open, onClose }: ModalProps) {
             <button
               onClick={() => {
                 setOtpSent(false);
+                setOtp("");
+                setName("");
+                setPhone("");
                 setError("");
               }}
               className="text-sm mt-2 text-[#BF9D84] hover:underline"
@@ -285,10 +337,6 @@ function TryNowModal({ open, onClose }: ModalProps) {
             </button>
           </>
         )}
-
-        <div className="text-xs text-gray-500 mt-4">
-          <p>{t("varify-again")}</p>
-        </div>
       </div>
     </Modal>
   );

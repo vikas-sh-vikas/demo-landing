@@ -28,7 +28,7 @@ export default function Customers() {
       contentTitle: t("tesimonials.1.feedback"),
       contentBody: t("tesimonials.1.author")
     },
-    {
+    { 
       title: t("tesimonials.2.quote"),
       contentTitle: t("tesimonials.2.feedback"),
       contentBody: t("tesimonials.2.author")
