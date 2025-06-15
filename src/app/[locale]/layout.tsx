@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Metadata } from "next";
 import Header from "@/components/UI/header/header";
 import Footer from "@/components/UI/footer/footer";
+import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'], variable: '--font-en' });
 
 const geistSans = Geist({
@@ -47,6 +48,8 @@ export default async function LocaleLayout({ children, params }: Props) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {" "}
+      <Toaster position="top-right" reverseOrder={false} />
+
         <NextIntlClientProvider>
           {" "}
           <Header />

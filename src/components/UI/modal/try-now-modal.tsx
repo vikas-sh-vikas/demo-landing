@@ -2,6 +2,8 @@ import React, { forwardRef, useEffect, useState } from "react";
 import Modal from "@/components/UI/modal/modal";
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
+import toast from "react-hot-toast";
+import { useTranslations } from "next-intl";
 
 type ModalProps = {
   open: boolean;
@@ -20,8 +22,8 @@ const CustomInput = forwardRef<
   />
 ));
 CustomInput.displayName = "CustomInput";
-
 function TryNowModal({ open, onClose }: ModalProps) {
+  const t = useTranslations("try_now");
   const [isModalOpen, setIsModalOpen] = useState(open);
 
   // Sync with parent state
@@ -47,52 +49,90 @@ function TryNowModal({ open, onClose }: ModalProps) {
       resetFormState();
     }
   }, [isModalOpen]);
-    const resetFormState = () => {
+  const resetFormState = () => {
     setPhone("");
     setOtpSent(false);
     setOtp("");
     setError("");
     setIsLoading(false);
   };
-  const sendOTP = () => {
+  console.log("phone", phone);
+  const sendOTP = async () => {
     if (!phone) {
       setError("Please enter a valid phone number");
       return;
     }
 
-    setIsLoading(true);
-    setError("");
-
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      setIsLoading(true);
+      const res = await fetch("/api/send-otp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userId: "USER_1749103669232",
+          to: phone.replace("+", ""),
+        }),
+      });
+      // const data = await res.json();
+      const { response } = await res.json();
+      console.log("statusCode", response.statusCode);
+      if (response.statusCode !== 200) {
+        {
+          setError("Enter valid mobile no.");
+        }
+      } else {
+        toast.success("Message sent successfully");
+        setError("");
+        setOtpSent(true);
+      }
+    } catch (error) {
+      console.log("error", error);
+    } finally {
       setIsLoading(false);
-      setOtpSent(true);
-      console.log(`OTP would be sent to: ${phone}`);
-    }, 1500);
+    }
   };
 
-  const verifyOTP = () => {
+  const verifyOTP = async () => {
     if (otp.length !== 6) {
       setError("Please enter a 6-digit OTP");
       return;
     }
-
-    setIsLoading(true);
-
-    // Simulate verification
-    setTimeout(() => {
+    try {
+      setIsLoading(true);
+      const res = await fetch("/api/varify-otp", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          userId: "USER_1749103669232",
+          otp: otp,
+        }),
+      });
+      const { response } = await res.json();
+      console.log("statusCode", response.statusCode);
+      if (response.statusCode !== 200) {
+        {
+          setError("otp not match");
+        }
+      } else {
+        toast.success("OTP verified successfully");
+        handleClose();
+      }
+    } catch (error) {
+      console.log("error", error);
+    } finally {
       setIsLoading(false);
-      console.log(`OTP verified: ${otp}`);
-      handleClose();
-      alert("Successfully verified!");
-    }, 1500);
+    }
   };
 
   return (
     <Modal
       isOpen={isModalOpen}
       onClose={handleClose}
-      title="Get Started"
+      title={t("header")}
       closeOnOutsideClick={true}
     >
       <div className="space-y-4">
@@ -103,7 +143,7 @@ function TryNowModal({ open, onClose }: ModalProps) {
                 htmlFor="phone"
                 className="block text-sm font-medium text-gray-700"
               >
-                Phone Number
+                {t("phone")}{" "}
               </label>
               <PhoneInput
                 id="phone"
@@ -120,9 +160,7 @@ function TryNowModal({ open, onClose }: ModalProps) {
                   } as React.CSSProperties
                 }
               />
-              <p className="text-xs text-gray-500 mt-1">
-                {"We'll send a verification code to this number"}
-              </p>
+              <p className="text-xs text-gray-500 mt-1">{t("phone-sub")}</p>
             </div>
 
             {error && <div className="text-red-500 text-sm">{error}</div>}
@@ -160,10 +198,10 @@ function TryNowModal({ open, onClose }: ModalProps) {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  Sending...
+                  {t("phone-button-loading")}{" "}
                 </span>
               ) : (
-                "Send Verification Code"
+                t("phone-button")
               )}
             </button>
           </>
@@ -174,7 +212,7 @@ function TryNowModal({ open, onClose }: ModalProps) {
                 htmlFor="otp"
                 className="block text-sm font-medium text-gray-700"
               >
-                Enter Verification Code
+                {t("varify")}{" "}
               </label>
               <div className="flex items-center space-x-2">
                 <input
@@ -190,7 +228,7 @@ function TryNowModal({ open, onClose }: ModalProps) {
                 />
               </div>
               <p className="text-xs text-gray-500 mt-1">
-                Enter the 6-digit code sent to {phone}
+                {t("varify-sub")} {phone}
               </p>
             </div>
 
@@ -229,26 +267,27 @@ function TryNowModal({ open, onClose }: ModalProps) {
                       d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
                     ></path>
                   </svg>
-                  Verifying...
+                  {t("varify-button-loading")}{" "}
                 </span>
               ) : (
-                "Verify Code"
+                t("varify-button")
               )}
             </button>
 
             <button
-              onClick={() => setOtpSent(false)}
+              onClick={() => {
+                setOtpSent(false);
+                setError("");
+              }}
               className="text-sm mt-2 text-[#BF9D84] hover:underline"
             >
-              Resend Code or Change Number
+              {t("varify-again")}{" "}
             </button>
           </>
         )}
 
         <div className="text-xs text-gray-500 mt-4">
-          <p>
-            By continuing, you agree to our Terms of Service and Privacy Policy
-          </p>
+          <p>{t("varify-again")}</p>
         </div>
       </div>
     </Modal>
